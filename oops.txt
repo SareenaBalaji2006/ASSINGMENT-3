@@ -1,0 +1,32 @@
+Exception Program in C++
+
+PROGRAM:
+
+#include <iostream.h>
+#include <exception>
+#include <stdexcept>
+
+int main() {
+    try {
+        int num1 = 10, num2 = 0;
+
+        if (num2 == 0) {
+            throw runtime_error("Division by zero error!"); // throwing exception object
+        }
+
+        int result = num1 / num2;
+        cout << "Result: " << result << endl;
+    }
+    catch (exception &e) {
+        
+        cout << "Exception caught!" << endl;
+        cout << "Error: " << e.what() << endl;
+    }
+
+    return 0;
+}
+
+OUTPUT:
+
+Exception caught!
+Error: Division by zero error!
